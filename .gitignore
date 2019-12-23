@@ -1,0 +1,22 @@
+
+# Other object files
+*.dat
+*.xlsx
+*.docx
+# *.csv
+# *.json
+*.bmp
+*.png
+*.jpg
+*.spec
+*.pyc
+*.svg
+*.exe
+
+# pyinstaller-F & pycharm
+__pycache__
+build
+dist
+.idea
+
+# large Files
