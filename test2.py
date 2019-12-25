@@ -11,9 +11,8 @@ def main():
     node2 = t.getNode("FBC")
     d1 = node1.getNodeWild('***')
     d2 = node2.getNodeWild('***')
-    print(len(d1.getPath()))
     print(x.getNodeName() for x in d1.getPath())
-    print(len(d2.getPath()))
+    print(d1.getPath())
 
 
 def get_nodes_name(shot):
@@ -30,8 +29,19 @@ def get_nodes_name(shot):
     return pool
 
 
+def write_tree():
+    tree = Tree('my_tree', -1, 'NEW')
+    tree.addNode(":NUM1", "NUMERIC")
+    tree.addNode(":NUM2", "NUMERIC")
+    tree.addNode(":NUM3", "NUMERIC")
+    tree.addNode(":TXT", "TEXT")
+    tree.setDefault(tree.addNode(".SUB1", "STRUCTURE"))
+    tree.addNode(":SUB_NODE1", "NUMERIC")
+    tree.addNode(".SUB2", "STRUCTURE")
+    tree.addNode(".SUB2:SUB_NODE2", "NUMERIC").addTag("TAG1")
+    tree.write()
+
+
 if __name__ == '__main__':
     main()
-    print(len(get_nodes_name(-1)))
-    print(get_nodes_name(-1))
 
