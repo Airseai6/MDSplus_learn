@@ -3,7 +3,6 @@
 # @Author : Qi
 
 from MDSplus import Tree
-from MDSplus import TreeNode
 import time
 
 
@@ -31,6 +30,9 @@ def copy_tree(shot):
                 pass
         tree_raw.setDefault(tree_raw.getNode("\EXL50::TOP"))
         tree_cop.setDefault(tree_cop.getNode("\EXL50_COPY::TOP"))
+        # tree_raw.setDefault(node.getParent())
+        # tree_cop.setDefault(node.getParent())
+
 
     tree_cop.write()
 

@@ -1,21 +1,22 @@
 #! python3
 # -*- coding:utf-8 -*-
-import datetime
-import time
-def jishi(fun):
-   def warper(*args, **kwargs):
-      start_time = datetime.datetime.now()
-      fun()
-      end_time = datetime.datetime.now()
-      haoshi = (end_time-start_time).total_seconds()
-      print("函数运行耗时{}".format(haoshi))
-   return warper()
 
-@jishi
-def yunsuan():
-   time.sleep(2)
-   for x in range(100):
-      print(x)
-yunsuan()
+from MDSplus import Tree
+from MDSplus import TreeNode
+
+t = Tree('my_tree', -1)
+node_str = "SUB1"
+node1 = t.getNode(node_str)
+node_path = node1.getMinPath()
+node_path2 = node1.getPath()
+node_path3 = node1.getFullPath()
+node_name = node1.getNodeName()
+node_father = node1.getParent()
+node_dtype = node1.getDtype()
+node_att = node1.getExtendedAttribute('NUMERIC')  # ??
+node_nid = node1.getNid()
+child_num = node1.getNumChildren()
+child_num2 = node1.getNumDescendants()
+print(11)
 
 
