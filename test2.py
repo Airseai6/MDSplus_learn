@@ -6,7 +6,7 @@ from MDSplus import *
 
 
 def main():
-    t = Tree('exl50', -1)
+    t = Tree('exl50_copy', -1)
     node1 = t.getNode("AI")
     node2 = t.getNode("FBC")
     d1 = node1.getNodeWild('***')
