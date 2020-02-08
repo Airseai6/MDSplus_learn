@@ -19,4 +19,3 @@ child_num = node1.getNumChildren()
 child_num2 = node1.getNumDescendants()
 print(11)
 
-
